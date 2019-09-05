@@ -11,18 +11,25 @@ var prime_size = process.argv[2];
 
 var grid = multi_grid_gen.GenerateMultiplcationGrid(prime_size);
 
-console_friendly_grid = grid_converter.ConvertGridToConsoleOutputArray(grid);
+//prevent grid conversion if we dont want an output as this function can cause heap allocation issues (huge amount of data)
+//for large sets
+if(process.argv[3] !== "NoOutput")
+{
+  console_friendly_grid = grid_converter.ConvertGridToConsoleOutputArray(grid);
+}
 
 if(process.argv[3] !== undefined)
 {
-  fs.writeFile("./" + process.argv[3], console_friendly_grid.join("\n"), function(err) {
-    if(err) {
-        return console.log(err);
-    }
+  if(process.argv[3] !== "NoOutput")
+  {
+    fs.writeFile("./" + process.argv[3], console_friendly_grid.join("\n"), function(err) {
+      if(err) {
+          return console.log(err);
+      }
 
-    console.log("The file was saved!");
-  }); 
-
+      console.log("The file was saved!");
+    }); 
+  }
 }
 else
 {
