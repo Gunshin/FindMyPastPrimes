@@ -1,0 +1,23 @@
+{
+  "name": "findmypastprimes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gunshin/FindMyPastPrimes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gunshin/FindMyPastPrimes/issues"
+  },
+  "homepage": "https://github.com/Gunshin/FindMyPastPrimes#readme"
+}
