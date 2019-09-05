@@ -8,8 +8,8 @@ function GenerateMultiplcationGrid( n )
     return [];
   }
   
-  primes = prime_gen.GenerateNPrimes(n);
-  primes_multiplication_grid = [primes];
+  var primes = prime_gen.GenerateNPrimes(n);
+  var primes_multiplication_grid = [primes];
   for(var i = 0; i < n; ++i)
   {
     grid_row = [primes[i]];
