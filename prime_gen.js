@@ -2,12 +2,30 @@
 
 function GenerateNPrimes( n )
 {
-  throw new Error(["Not Implemented"])
+  primes = [];
+  count = 0;
+  for(var i = 2; count < n; ++i)
+  {
+    if(IsPrime(i))
+    {
+      count++;
+      primes.push(i);
+    }
+  }
+  
+  return primes;
 }
 
 function IsPrime(num)
 {
-  throw new Error(["Not Implemented"])
+  if(num < 2)
+    return false;
+
+  for (var i = 2; i * i <= num; ++i) {
+    if (num % i == 0)
+      return false;
+  }
+  return true;
 }
 
 module.exports.GenerateNPrimes = GenerateNPrimes;
