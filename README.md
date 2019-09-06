@@ -7,12 +7,15 @@ Can be installed with "npm install" which will install the dev dependencies "moc
 Can be ran with NodeJS via the below commands:
 
 This command will output to the console.
+
 node main <prime_count>
 
 This command will output to text file.
+
 node main <prime_count> <text_file_name>
 
 This command will allow prime generation of large(r) sets without getting a heap issue.
+
 node main <prime_count> NoOutput
 
 
