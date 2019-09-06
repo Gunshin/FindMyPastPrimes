@@ -21,7 +21,9 @@ node main <prime_count> NoOutput
 Improvements:
 
 The biggest improvement that could be made would be to write a new flow for converting/outputting the grid as it is generated to help avoid the heap out of space error i face. This would be due to the fact that i would not be storing the whole grid at the same time, and instead would only require to know row by row, or perhaps even cell by cell. However, printing such large sets to file would likely be impractical given the huge volume of data that would be generated for 10000+ sets.
+
 The next biggest improvement would be to read up on how to better improve the performance of validating a prime number.
+
 Should have added a try catch for the heap allocation error, as it is not a good idea to leave an erroring program to just core dump.
 
 
